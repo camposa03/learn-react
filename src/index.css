@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #3a2449;
+  background: linear-gradient(90deg, #0c3840 50%, #ff6634) ;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -65,4 +65,33 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+form input {
+  justify-content: end;
+  padding-bottom: 5px;;
+  margin-bottom: 50px;
+  background-color:#0c3840;
+  border: 2px solid white;
+
+}
+
+form p{
+  display: table;
+  margin-bottom: 30px;
+}
+
+form label {
+  float: left;
+}
+
+form button{
+  background-color: #ff6634;
+  transition-duration: 1.0s;
+  
+}
+
+form button:hover{
+  background-color: #0c3842;
+  border-color:#ff6634;
 }
