@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+</style>
+
 
 function App() {
 
@@ -11,6 +14,7 @@ function App() {
   const [currentWeight, setCurrentWeight] = useState("");
   const [goalWeight, setGoalWeight] = useState("");
   const [preferedDays, setPreferedDays] = useState("");
+  const [conditions, setConditions] = useState("");
   const [contactNumber, setContactNumber] = useState("");
 
   function handleFirstNameChange(event) {
@@ -49,6 +53,12 @@ function App() {
 
 
 
+  function handleConditionsChange(event) {
+    setConditions(event.target.value);
+  }
+
+
+
   function handleContactNumberChange(event) {
     setContactNumber(event.target.value);
   }
@@ -62,6 +72,7 @@ function App() {
       currentWeight: currentWeight,
       goalWeight: goalWeight,
       preferedDays: preferedDays,
+      conditions: conditions,
       contactNumber: contactNumber
     };
     const isValid = validate(formValues);
@@ -104,6 +115,7 @@ function App() {
           formValues.currentWeight.trim() === ""||
           formValues.goalWeight.trim() === "" ||
           formValues.preferedDays.trim() === "" ||
+          formValues.conditions.trim() === "" ||
           formValues.contactNumber.trim() === ""
           )  {
             return false;
@@ -114,49 +126,54 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Questionnaire</h1>
+    <head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alice&family=Rubik+Doodle+Shadow&display=swap');
+    </style>
+    </head>
+
+    
+    <h1>Questionnaire</h1>
     
 
     <form action="#" onSubmit={handleSubmit}>
-      <label htmlFor="fname">First Name</label>
+      <label htmlFor="fname">First Name:</label>
       <input onChange={handleFirstNameChange} type="text" id="fname" name="fname"/>
 
       <br />
 
-      <label htmlFor="lname">Last Name</label>
+      <label htmlFor="lname">Last Name:</label>
       <input onChange={handleLastNameChange}  type="text" id="lname" name="lname"/>
 
       <br />
 
-      <label htmlFor="age">Current Age</label>
+      <label htmlFor="age">Current Age:</label>
       <input onChange={handleCurrentAgeChange} type="number" id="age" name="age"/>
 
       <br />
 
-      <label htmlFor="weight">Current Weight</label>
+      <label htmlFor="weight">Current Weight:</label>
       <input onChange={handleCurrentWeightChange} type="text" id="weight" name="weight"/>
 
       <br />
 
-      <label htmlFor="goal">Weight Goal</label>
+      <label htmlFor="goal">Weight Goal:</label>
       <input onChange={handleGoalWeightChange} type="text" id="goal" name="goal"/>
 
       <br />
 
-      <label htmlFor="days">Prefered Days</label>
+      <label htmlFor="days">Prefered Days:</label>
       <input onChange={handlePreferedDaysChange} type="text" id="days" name="days"/>
 
       <br />
 
-      <label htmlFor="contact">Contact Number</label>
+      <label htmlFor="conditions">Health Conditions:</label>
+      <input onChange={handleConditionsChange} type="text" id="conditions" name="conditions"/>
+
+      <br />
+
+      <label htmlFor="contact">Contact Number:</label>
       <input onChange={handleContactNumberChange} type="text" id="contact" name="contact"/>
       
       <p>Name: {firstName} {lastName}</p>
@@ -164,6 +181,7 @@ function App() {
       <p>Current Weight: {currentWeight}</p>
       <p>Goal Weight: {goalWeight}</p>
       <p>Prefered Days of Exercise: {preferedDays}</p>
+      <p>Health Conditions:</p>
       <p>Contact Number: {contactNumber}</p>
 
       <button type="submit">Submit</button>

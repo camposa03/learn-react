@@ -30,9 +30,23 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.rubik-doodle-shadow-regular {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alice-regular {
+  font-family: "Alice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+h1{
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-size: 65px;
 }
 
 button {
@@ -72,17 +86,25 @@ form input {
   padding-bottom: 5px;;
   margin-bottom: 50px;
   background-color:#0c3840;
-  border: 2px solid white;
+  border: 1px solid white;
 
 }
 
 form p{
   display: table;
   margin-bottom: 30px;
+  font-family: "Alice", serif;
+  font-size: 20px;
 }
 
 form label {
   float: left;
+  font-family: "Alice", serif;
+  font-size: 20px;
+}
+
+form input:focus {
+  border: 2px solid #ff6634;
 }
 
 form button{
