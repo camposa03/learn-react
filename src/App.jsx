@@ -124,6 +124,18 @@ function App() {
     
     }
 
+    function calculateBMI() {
+
+      let weight = document.getElementById('weight').value
+      let height = document.getElementById('height').value
+
+      let bmi = (weight / (height * height) * 703)
+
+      document.getElementById('heading').innerHTML = 'Your BMI is:'
+      document.getElementById('bmi-output').innerHTML = bmi;
+
+    }
+
   return (
     <>
     <head>
@@ -181,10 +193,22 @@ function App() {
       <p>Current Weight: {currentWeight}</p>
       <p>Goal Weight: {goalWeight}</p>
       <p>Prefered Days of Exercise: {preferedDays}</p>
-      <p>Health Conditions:</p>
+      <p>Health Conditions: {conditions}</p>
       <p>Contact Number: {contactNumber}</p>
 
-      <button type="submit">Submit</button>
+      <h1>BMI Calculator</h1>
+      <label htmlFor="weight">Weight (lbs)</label>
+      <input id="weight" type="numbers" /> <br/>
+      <label htmlFor="height">Height (in)</label>
+      <input id="height" type="numbers" /> <br/>
+
+      <h3 id='heading'></h3>
+      <p id='bmi-output'></p>
+      <p id='message'></p>
+
+      <button onClick='handleSumbit' type="submit">Submit</button>
+      <button onClick='reload()' type="submit">Clear</button>
+
     </form>
     </>
   )
