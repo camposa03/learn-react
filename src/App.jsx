@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-
+import DeLogo from './assets/DeLogo.png'
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 </style>
@@ -124,17 +124,6 @@ function App() {
     
     }
 
-    function calculateBMI() {
-
-      let weight = document.getElementById('weight').value
-      let height = document.getElementById('height').value
-
-      let bmi = (weight / (height * height) * 703)
-
-      document.getElementById('heading').innerHTML = 'Your BMI is:'
-      document.getElementById('bmi-output').innerHTML = bmi;
-
-    }
 
   return (
     <>
@@ -145,48 +134,52 @@ function App() {
     </style>
     </head>
 
+    <div className="header">
+    <div className="nav-logo">
+      <img src={DeLogo} alt="" />
+    </div>
+    </div>
     
-    <h1>Questionnaire</h1>
-    
+    <h1>Help us get to know you!</h1>
 
     <form action="#" onSubmit={handleSubmit}>
       <label htmlFor="fname">First Name:</label>
-      <input onChange={handleFirstNameChange} type="text" id="fname" name="fname"/>
+      <input onChange={handleFirstNameChange} type="text" id="fname" name="fname" placeholder='Enter Here...'/>
 
       <br />
 
       <label htmlFor="lname">Last Name:</label>
-      <input onChange={handleLastNameChange}  type="text" id="lname" name="lname"/>
+      <input onChange={handleLastNameChange}  type="text" id="lname" name="lname" placeholder='Enter Here...'/>
 
       <br />
 
       <label htmlFor="age">Current Age:</label>
-      <input onChange={handleCurrentAgeChange} type="number" id="age" name="age"/>
+      <input onChange={handleCurrentAgeChange} type="number" id="age" name="age" placeholder='Enter Here...'/>
 
       <br />
 
       <label htmlFor="weight">Current Weight:</label>
-      <input onChange={handleCurrentWeightChange} type="text" id="weight" name="weight"/>
+      <input onChange={handleCurrentWeightChange} type="text" id="weight" name="weight" placeholder='Enter Here...'/>
 
       <br />
 
       <label htmlFor="goal">Weight Goal:</label>
-      <input onChange={handleGoalWeightChange} type="text" id="goal" name="goal"/>
+      <input onChange={handleGoalWeightChange} type="text" id="goal" name="goal" placeholder='Enter Here...'/>
 
       <br />
 
-      <label htmlFor="days">Prefered Days:</label>
-      <input onChange={handlePreferedDaysChange} type="text" id="days" name="days"/>
+      <label htmlFor="days">Prefered Days of Exercise:</label>
+      <input onChange={handlePreferedDaysChange} type="text" id="days" name="days" placeholder='Enter Here...'/>
 
       <br />
 
       <label htmlFor="conditions">Health Conditions:</label>
-      <input onChange={handleConditionsChange} type="text" id="conditions" name="conditions"/>
+      <input onChange={handleConditionsChange} type="text" id="conditions" name="conditions" placeholder='Enter Here...'/>
 
       <br />
 
       <label htmlFor="contact">Contact Number:</label>
-      <input onChange={handleContactNumberChange} type="text" id="contact" name="contact"/>
+      <input onChange={handleContactNumberChange} type="text" id="contact" name="contact" placeholder='Enter Here...'/>
       
       <p>Name: {firstName} {lastName}</p>
       <p>Age: {currentAge}</p>
@@ -196,15 +189,10 @@ function App() {
       <p>Health Conditions: {conditions}</p>
       <p>Contact Number: {contactNumber}</p>
 
+      <div>
       <h1>BMI Calculator</h1>
-      <label htmlFor="weight">Weight (lbs)</label>
-      <input id="weight" type="numbers" /> <br/>
-      <label htmlFor="height">Height (in)</label>
-      <input id="height" type="numbers" /> <br/>
+      </div>
 
-      <h3 id='heading'></h3>
-      <p id='bmi-output'></p>
-      <p id='message'></p>
 
       <button onClick='handleSumbit' type="submit">Submit</button>
       <button onClick='reload()' type="submit">Clear</button>
@@ -215,3 +203,4 @@ function App() {
 }
 
 export default App
+ 

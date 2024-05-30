@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(90deg, #0c3840 50%, #ff6634) ;
+  background: #020000FF;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 .rubik-doodle-shadow-regular {
@@ -42,11 +43,24 @@ body {
   font-style: normal;
 }
 
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  border-radius: 0;
+  width: 100%;
+  z-index: 1;
+  color: #3e065f;
+  
+}
 
+.nav-logo {
+  width: 1.5rem;
+}
 
 h1{
   font-family: "Rubik Doodle Shadow", system-ui;
-  font-size: 65px;
+  font-size: 55px;
 }
 
 button {
@@ -56,12 +70,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #0088FFFF;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #0088FFFF;
 }
 button:focus,
 button:focus-visible {
@@ -81,13 +95,23 @@ button:focus-visible {
   }
 }
 
+form {
+  padding-top: 20%;
+  position: absolute;
+  left: 515px;
+
+}
+
 form input {
-  justify-content: end;
-  padding-bottom: 5px;;
+  padding: 8px;
   margin-bottom: 50px;
-  background-color:#0c3840;
+  background-color:white;
   border: 1px solid white;
 
+}
+
+form input::placeholder {
+  color: #000000;
 }
 
 form p{
@@ -104,16 +128,17 @@ form label {
 }
 
 form input:focus {
-  border: 2px solid #ff6634;
-}
-
-form button{
-  background-color: #ff6634;
-  transition-duration: 1.0s;
+  border: 2px solid #0c1e22;
   
 }
 
+form button{
+  background-color: #000000;
+  transition-duration: 1.0s;
+  margin: 20px;
+}
+
 form button:hover{
-  background-color: #0c3842;
-  border-color:#ff6634;
+  background-color: #0c1e22;
+  border-color:#a0a3a8;
 }
