@@ -80,7 +80,7 @@ function App() {
     } else {
       console.log("invalid")
     };
-
+  }
     return (
       <>
         <header>
@@ -148,7 +148,7 @@ function App() {
 
           <div>
             <h1>BMI Calculator</h1>
-            <BmiCalculator />
+            <BmiCalculator weight={currentWeight} />
           </div>
 
 
@@ -161,7 +161,7 @@ function App() {
 
     );
 
-  }
+  
 
 }
 

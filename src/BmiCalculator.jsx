@@ -4,16 +4,18 @@ import App from './App.jsx'
 import './index.css'
 import { useState } from 'react'
 
-const BmiCalculator = () => {
+const BmiCalculator = (props) => {
+    console.log(props);
     const [weight, setWeight] = useState('');
     const [height, setHeight] = useState('');
     const [bmi, setBmi] = useState('');
 
     const calculateBMI = () => {
-      const heightInMeters = height / 100;
-      console.log(heightInMeters);
-      const bmiValue = weight / (heightInMeters * heightInMeters);
-      setBmi(bmiValue);
+      const heightInInch = height;
+      console.log(heightInInch);
+      const bmiTemp = (props.weight * 703 / heightInInch);
+      const bmi = (bmiTemp / heightInInch)
+      setBmi(bmi);
     };
     return (
       <div>
