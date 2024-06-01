@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Visionaries from './assets/Visionaries.png'
+import BmiCalculator from './BmiCalculator'
+
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 </style>
@@ -202,6 +205,7 @@ function App() {
 
       <div>
       <h1>BMI Calculator</h1>
+        <BmiCalculator />
       </div>
 
 
