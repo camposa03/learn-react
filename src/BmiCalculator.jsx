@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { useState } from 'react'
 
 const BmiCalculator = () => {
     const [weight, setWeight] = useState('');
@@ -10,6 +11,7 @@ const BmiCalculator = () => {
 
     const calculateBMI = () => {
       const heightInMeters = height / 100;
+      console.log(heightInMeters);
       const bmiValue = weight / (heightInMeters * heightInMeters);
       setBmi(bmiValue);
     };

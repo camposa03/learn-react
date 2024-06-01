@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Visionaries from './assets/Visionaries.png'
 import BmiCalculator from './BmiCalculator'
+import validateForm from '../validateForm'
 
 
 <style>
@@ -85,33 +86,12 @@ function App() {
       alert("Fill out Form!");
     }
   }
-
-    function validate(formValues) {
-      const currentAgeNum = isNaN(parseInt(formValues.currentAge, 10));
-      console.log(currentAgeNum)
-      if (currentAgeNum) {
-        return false;
-      }
-      const currentWeightNum = isNaN(parseInt(formValues.currentWeightNum, 10));
-      console.log(currentWeightNum)
-      if (currentWeightNum) {
-        return false;
-      }
-      const currentGoalNum = isNaN(parseInt(formValues.currentGoalNum, 10));
-      console.log(currentGoalNum)
-      if (currentGoalNum) {
-        return false;
-      }
-      const preferedDaysNum = isNaN(parseInt(formValues.preferedDaysNum, 10));
-      console.log(preferedDaysNum)
-      if (preferedDaysNum) {
-        return false;
-      }
-      const contactNum = isNaN(parseInt(formValues.contactNum, 10));
-      console.log(contacttNum)
-      if (contactNum) {
-        return false;
-      }
+    const isValid= validateForm(formValues);
+    if(isValid) {
+      console.log("valid")
+    } else {
+      console.log("invalid")
+    };  
       if (formValues.firstName.trim() === "" ||
           formValues.lastName.trim() === "" ||
           formValues.currentAge.trim() === "" ||
@@ -127,19 +107,8 @@ function App() {
     
     }
 
-
   return (
     <>
-    <head>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Alice&family=Rubik+Doodle+Shadow&display=swap');
-    </style>
-    </head>
-
-    <body>
-      
-    </body>
     <header>
       <img src={Visionaries} alt="" />
       <nav>
@@ -217,8 +186,7 @@ function App() {
     </>
     
   );
-  
-}
+
     
 export default App
  
