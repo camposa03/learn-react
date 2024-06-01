@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import DeLogo from './assets/DeLogo.png'
+import Visionaries from './assets/Visionaries.png'
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 </style>
@@ -134,13 +134,24 @@ function App() {
     </style>
     </head>
 
-    <div className="header">
-    <div className="nav-logo">
-      <img src={DeLogo} alt="" />
-    </div>
-    </div>
+    <body>
+      
+    </body>
+    <header>
+      <img src={Visionaries} alt="" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <a className="cta" href="#"><button>Contact</button></a>
+    </header>
     
     <h1>Help us get to know you!</h1>
+    <p>Please fill out the following form below!</p>
 
     <form action="#" onSubmit={handleSubmit}>
       <label htmlFor="fname">First Name:</label>
@@ -198,9 +209,12 @@ function App() {
       <button onClick='reload()' type="submit">Clear</button>
 
     </form>
+    
     </>
-  )
+    
+  );
+  
 }
-
+    
 export default App
  
