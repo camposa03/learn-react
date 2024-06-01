@@ -4,12 +4,6 @@ import Visionaries from './assets/Visionaries.png'
 import BmiCalculator from './BmiCalculator'
 import validateForm from '../validateForm'
 
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
-</style>
-
-
 function App() {
 
   const [firstName, setFirstName] = useState("");
@@ -25,8 +19,8 @@ function App() {
     setFirstName(event.target.value);
   }
 
-  
-  
+
+
   function handleLastNameChange(event) {
     setLastName(event.target.value);
   }
@@ -79,114 +73,97 @@ function App() {
       conditions: conditions,
       contactNumber: contactNumber
     };
-    const isValid = validate(formValues);
+
+    const isValid = validateForm(formValues);
     if (isValid) {
-      alert ("Submitted");
-    } else {
-      alert("Fill out Form!");
-    }
-  }
-    const isValid= validateForm(formValues);
-    if(isValid) {
       console.log("valid")
     } else {
       console.log("invalid")
-    };  
-      if (formValues.firstName.trim() === "" ||
-          formValues.lastName.trim() === "" ||
-          formValues.currentAge.trim() === "" ||
-          formValues.currentWeight.trim() === ""||
-          formValues.goalWeight.trim() === "" ||
-          formValues.preferedDays.trim() === "" ||
-          formValues.conditions.trim() === "" ||
-          formValues.contactNumber.trim() === ""
-          )  {
-            return false;
-      }
-        return true;
-    
-    }
+    };
 
-  return (
-    <>
-    <header>
-      <img src={Visionaries} alt="" />
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About Us</a></li>
-        </ul>
-      </nav>
-      <a className="cta" href="#"><button>Contact</button></a>
-    </header>
-    
-    <h1>Help us get to know you!</h1>
-    <p>Please fill out the following form below!</p>
+    return (
+      <>
+        <header>
+          <img src={Visionaries} alt="" />
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </nav>
+          <a className="cta" href="#"><button>Contact</button></a>
+        </header>
 
-    <form action="#" onSubmit={handleSubmit}>
-      <label htmlFor="fname">First Name:</label>
-      <input onChange={handleFirstNameChange} type="text" id="fname" name="fname" placeholder='Enter Here...'/>
+        <h1>Help us get to know you!</h1>
+        <p>Please fill out the following form below!</p>
 
-      <br />
+        <form action="#" onSubmit={handleSubmit}>
+          <label htmlFor="fname">First Name:</label>
+          <input onChange={handleFirstNameChange} type="text" id="fname" name="fname" placeholder='Enter Here...' />
 
-      <label htmlFor="lname">Last Name:</label>
-      <input onChange={handleLastNameChange}  type="text" id="lname" name="lname" placeholder='Enter Here...'/>
+          <br />
 
-      <br />
+          <label htmlFor="lname">Last Name:</label>
+          <input onChange={handleLastNameChange} type="text" id="lname" name="lname" placeholder='Enter Here...' />
 
-      <label htmlFor="age">Current Age:</label>
-      <input onChange={handleCurrentAgeChange} type="number" id="age" name="age" placeholder='Enter Here...'/>
+          <br />
 
-      <br />
+          <label htmlFor="age">Current Age:</label>
+          <input onChange={handleCurrentAgeChange} type="number" id="age" name="age" placeholder='Enter Here...' />
 
-      <label htmlFor="weight">Current Weight:</label>
-      <input onChange={handleCurrentWeightChange} type="text" id="weight" name="weight" placeholder='Enter Here...'/>
+          <br />
 
-      <br />
+          <label htmlFor="weight">Current Weight:</label>
+          <input onChange={handleCurrentWeightChange} type="text" id="weight" name="weight" placeholder='Enter Here...' />
 
-      <label htmlFor="goal">Weight Goal:</label>
-      <input onChange={handleGoalWeightChange} type="text" id="goal" name="goal" placeholder='Enter Here...'/>
+          <br />
 
-      <br />
+          <label htmlFor="goal">Weight Goal:</label>
+          <input onChange={handleGoalWeightChange} type="text" id="goal" name="goal" placeholder='Enter Here...' />
 
-      <label htmlFor="days">Prefered Days of Exercise:</label>
-      <input onChange={handlePreferedDaysChange} type="text" id="days" name="days" placeholder='Enter Here...'/>
+          <br />
 
-      <br />
+          <label htmlFor="days">Prefered Days of Exercise:</label>
+          <input onChange={handlePreferedDaysChange} type="text" id="days" name="days" placeholder='Enter Here...' />
 
-      <label htmlFor="conditions">Health Conditions:</label>
-      <input onChange={handleConditionsChange} type="text" id="conditions" name="conditions" placeholder='Enter Here...'/>
+          <br />
 
-      <br />
+          <label htmlFor="conditions">Health Conditions:</label>
+          <input onChange={handleConditionsChange} type="text" id="conditions" name="conditions" placeholder='Enter Here...' />
 
-      <label htmlFor="contact">Contact Number:</label>
-      <input onChange={handleContactNumberChange} type="text" id="contact" name="contact" placeholder='Enter Here...'/>
-      
-      <p>Name: {firstName} {lastName}</p>
-      <p>Age: {currentAge}</p>
-      <p>Current Weight: {currentWeight}</p>
-      <p>Goal Weight: {goalWeight}</p>
-      <p>Prefered Days of Exercise: {preferedDays}</p>
-      <p>Health Conditions: {conditions}</p>
-      <p>Contact Number: {contactNumber}</p>
+          <br />
 
-      <div>
-      <h1>BMI Calculator</h1>
-        <BmiCalculator />
-      </div>
+          <label htmlFor="contact">Contact Number:</label>
+          <input onChange={handleContactNumberChange} type="text" id="contact" name="contact" placeholder='Enter Here...' />
+
+          <p>Name: {firstName} {lastName}</p>
+          <p>Age: {currentAge}</p>
+          <p>Current Weight: {currentWeight}</p>
+          <p>Goal Weight: {goalWeight}</p>
+          <p>Prefered Days of Exercise: {preferedDays}</p>
+          <p>Health Conditions: {conditions}</p>
+          <p>Contact Number: {contactNumber}</p>
+
+          <div>
+            <h1>BMI Calculator</h1>
+            <BmiCalculator />
+          </div>
 
 
-      <button onClick='handleSumbit' type="submit">Submit</button>
-      <button onClick='reload()' type="submit">Clear</button>
+          <button onClick='handleSumbit' type="submit">Submit</button>
+          <button onClick='reload()' type="submit">Clear</button>
 
-    </form>
-    
-    </>
-    
-  );
+        </form>
 
-    
-export default App
- 
+      </>
+
+    );
+
+  }
+
+}
+
+
+export default App;
