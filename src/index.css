@@ -76,6 +76,7 @@ header img {
 h1{
   font-family: "Rubik Doodle Shadow", system-ui;
   font-size: 55px;
+  padding-top: 80px;
 }
 
 button {
@@ -111,7 +112,7 @@ button:focus-visible {
 }
 
 form {
-  padding-top: 20%;
+  padding-top: 10%;
   position: absolute;
   left: 515px;
 
@@ -157,4 +158,19 @@ form button:hover{
   background-color: #0c1e22;
   border-color:#a0a3a8;
 }
+
+.preForm {
+  padding-top: 80px;
+}
+
+.Blog {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+
+.Blog h1 {
+  padding-bottom: 75px;
+}
+
 

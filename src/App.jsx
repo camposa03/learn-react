@@ -3,6 +3,7 @@ import './App.css'
 import Visionaries from './assets/Visionaries.png'
 import BmiCalculator from './BmiCalculator'
 import validateForm from '../validateForm'
+import BlogPost from './BlogPost'
 
 function App() {
 
@@ -81,6 +82,21 @@ function App() {
       console.log("invalid")
     };
   }
+    const posts = [
+      {
+        title: "My Fitness Journey",
+        author: "John Doe",
+        date: "June 10, 2024",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        title: "One Day or Day One?",
+        author: "Jane Smith",
+        date: "June 11, 2024",
+        content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    ];
+
     return (
       <>
         <header>
@@ -88,17 +104,34 @@ function App() {
           <nav>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="#">Blog</a></li>
               <li><a href="#">Products</a></li>
               <li><a href="#">About Us</a></li>
+              <li><a href="#">About You</a></li>
             </ul>
           </nav>
           <a className="cta" href="#"><button>Contact</button></a>
         </header>
 
-        <h1>Help us get to know you!</h1>
-        <p>Please fill out the following form below!</p>
+        <div className="Blog">
+          <h1>Our Blog</h1>
+          {/* Render each blog post */}
+          {posts.map((post, index) => (
+            <BlogPost
+              key={index} // Key should be unique, using index as a simple example here
+              title={post.title}
+              author={post.author}
+              date={post.date}
+              content={post.content}
+            />
+          ))}
+        </div>
 
+
+        <div className='preForm'>
+          <h1>Help us get to know you!</h1>
+          <p>Please fill out the following form below!</p>
+        </div>
         <form action="#" onSubmit={handleSubmit}>
           <label htmlFor="fname">First Name:</label>
           <input onChange={handleFirstNameChange} type="text" id="fname" name="fname" placeholder='Enter Here...' />
@@ -155,7 +188,9 @@ function App() {
           <button onClick='handleSumbit' type="submit">Submit</button>
           <button onClick='reload()' type="submit">Clear</button>
 
+
         </form>
+
 
       </>
 
