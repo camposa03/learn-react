@@ -160,7 +160,7 @@ form button:hover{
 }
 
 .preForm {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 .Blog {
@@ -173,4 +173,6 @@ form button:hover{
   padding-bottom: 75px;
 }
 
-
+.Blog .content {
+  margin-bottom: 100px;
+}

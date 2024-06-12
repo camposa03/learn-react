@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Visionaries from './assets/Visionaries.png'
-import BmiCalculator from './BmiCalculator'
-import validateForm from '../validateForm'
-import BlogPost from './BlogPost'
+import BmiCalculator from '../BmiCalculator'
+import validateForm from '../../validateForm'
+import BlogPost from '../BlogPost'
 
 function App() {
 
@@ -104,10 +104,10 @@ function App() {
           <nav>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Products</a></li>
               <li><a href="#">About Us</a></li>
-              <li><a href="#">About You</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Merchandise</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </nav>
           <a className="cta" href="#"><button>Contact</button></a>
@@ -130,7 +130,7 @@ function App() {
 
         <div className='preForm'>
           <h1>Help us get to know you!</h1>
-          <p>Please fill out the following form below!</p>
+          <p>For us to give our best advice, please fill out the following form below!</p>
         </div>
         <form action="#" onSubmit={handleSubmit}>
           <label htmlFor="fname">First Name:</label>
