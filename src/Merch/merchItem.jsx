@@ -11,28 +11,28 @@ const merchandiseItems = [
     {
         id: 1,
         name: "T-Shirt",
-        description: "chest logo with graphic back",
+        description: "chest logo with graphic (white)",
         price: "25.99",
         image: ""
     },
     {
         id: 2,
         name: "Bottoms",
-        description: "chest logo with graphic back",
+        description: "chest logo graphic (black)",
         price: "25.99",
         image: ""
     },
     {
         id: 3,
         name: "Cap",
-        description: "chest logo with graphic back",
+        description: "chest logo and graphic #2 (white)",
         price: "25.99",
         image: ""
     },
     {
         id: 4,
         name: "T-Shirt 2",
-        description: "chest logo with graphic back",
+        description: "chest logo and graphic (black)",
         price: "25.99",
         image: ""
     },

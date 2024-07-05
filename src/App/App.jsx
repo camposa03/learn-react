@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import Visionaries from './assets/Visionaries.png'
-import BmiCalculator from '../BmiCalculator'
+import Visionaries from '../assets/Visionaries.png'
+import BmiCalculator from '../BMI/BmiCalculator'
 import validateForm from '../../validateForm'
-import BlogPost from '../BlogPost'
+import '../NavBar/NavBar.css'
+
 
 function App() {
 
@@ -82,51 +83,71 @@ function App() {
       console.log("invalid")
     };
   }
-    const posts = [
-      {
-        title: "My Fitness Journey",
-        author: "John Doe",
-        date: "June 10, 2024",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      },
-      {
-        title: "One Day or Day One?",
-        author: "Jane Smith",
-        date: "June 11, 2024",
-        content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      }
-    ];
 
     return (
       <>
         <header>
-          <img src={Visionaries} alt="" />
           <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Merchandise</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+            <div className="header">
+                <img className='logo' src={Visionaries} alt="" />
+                <ul className='nav-menu'>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Programs</a></li>   
+                    <li><a href="#">Merchandise</a></li>
+                    <li><a href="#">Contact</a></li>             
+                </ul>
+            <div className='menu'>
+                <i className='menuIcon material-icons'></i>
+                <i className='closeIcon material-icons'></i>
+            </div>
+            <div className='nav_mobile'>
+                <div className='nav_mobile_content'>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Programs</a></li>   
+                <li><a href="#">Merchandise</a></li>
+                <li><a href="#">Contact</a></li>
+                </div>
+            </div>
+            </div>
           </nav>
-          <a className="cta" href="#"><button>Contact</button></a>
-        </header>
+          </header>
+      
+          <div className="about">
+          <h1>About Us</h1>
+            <p>Here at Sacred Visionaries, we pride ourselves in holistic fitness! We understand that your journey is unique. <br />
+              Redefining your physical, mental, and spiritual relationships isn't easy. That's what we're here for! To guide those willing to <br />
+              change their lives. From begginer to advanced, weights or calisthenics, and mindset to nutrition, we can help!<br />
+              
 
-        <div className="Blog">
-          <h1>Our Blog</h1>
-          {/* Render each blog post */}
-          {posts.map((post, index) => (
-            <BlogPost
-              key={index} // Key should be unique, using index as a simple example here
-              title={post.title}
-              author={post.author}
-              date={post.date}
-              content={post.content}
-            />
-          ))}
-        </div>
+            </p>
+          </div>
 
+
+          <div className="Testimonials">
+          <h1>Testimonials</h1>
+          <p>"Working with Martin has definetly given me a different outook on life!<br/>
+          Not only have I seen massive change on my body, my way of thinking changed. Thanks Martin!"<br/>
+          -John Doe</p>
+          <br/>
+          <p>"Rudy has been an inspiration since day one! My relationship with<br/>
+          myself and with God has grown massively and I am forever grateful!"<br/>
+          -John Doe</p>
+          <br/>
+          <p>"Sam is a gamechanger! I feel and look way better than 3 months ago.<br/>
+          She changed the way I view food and the way I view myself!"<br/>
+          </p>
+          <br/>
+          <p>"I never knew calisthenics would be so fun! Yes, it's super challenging,<br/>
+          but my body can do things it wasn't able to years ago! Thanks Joey for being<br/>
+          a great coach!"<br/>
+          -John Doe</p>
+          </div>
+
+      
 
         <div className='preForm'>
           <h1>Help us get to know you!</h1>
@@ -184,12 +205,17 @@ function App() {
             <BmiCalculator weight={currentWeight} />
           </div>
 
+          <div>
+            <p>Does this information look correct to you?<br />If so, please submit.</p>
+          </div>
 
           <button onClick='handleSumbit' type="submit">Submit</button>
           <button onClick='reload()' type="submit">Clear</button>
 
 
         </form>
+
+
 
 
       </>

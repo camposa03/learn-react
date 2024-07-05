@@ -14,7 +14,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: #020000FF;
+  background: #06090f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -39,11 +39,18 @@ body {
   
 }
 
-.rubik-doodle-shadow-regular {
-  font-family: "Rubik Doodle Shadow", system-ui;
+.baskervville-sc-regular {
+  font-family: "Baskervville SC", serif;
   font-weight: 400;
   font-style: normal;
 }
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 .alice-regular {
   font-family: "Alice", serif;
@@ -51,30 +58,15 @@ body {
   font-style: normal;
 }
 
-.header {
-  display: flex;
-  color: #3e065f;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
-  margin: 0px;
-}
-
-header img {
-  width: auto;
-  height: 100px;
-}
-
-
- li, a {
+ li, a { /*/listens here/*/
     text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
 }
-
-
 
 
 h1{
-  font-family: "Rubik Doodle Shadow", system-ui;
+  font-family: "Baskervville SC", serif;
   font-size: 55px;
   padding-top: 80px;
 }
@@ -86,7 +78,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #0088FFFF;
+  background-color: #000;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -161,18 +153,4 @@ form button:hover{
 
 .preForm {
   padding-top: 20px;
-}
-
-.Blog {
-  padding-top: 30px;
-  padding-bottom: 40px;
-}
-
-
-.Blog h1 {
-  padding-bottom: 75px;
-}
-
-.Blog .content {
-  margin-bottom: 100px;
 }
