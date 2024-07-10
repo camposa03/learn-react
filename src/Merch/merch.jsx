@@ -161,3 +161,5 @@ const merchandiseSection =({ title, items }) => {
         </section>
     )
 }
+
+export default Merchandise
