@@ -2,10 +2,11 @@ import React from 'react'
 import './merch.css'
 
 
+function Merchandise () {
 
-
-const merchandiseItems = [
-    {
+    
+    const merchandiseItems = [
+        {
         id: 1,
         name: "T-Shirt",
         description: "chest logo with graphic",
@@ -117,49 +118,52 @@ const merchandiseItems = [
         price: "25.99",
         image: ""
     },
-
+    
 ]
 
 
 
 
+return (
+
+    null
+    
+    
+    // const merchandiseItem = ({item}) => {
+    // return (
+    //     <div className='merch-item'>
+    //         <img src="" alt="" />
+    //         <h3>{item.name}</h3>
+    //         <p>{item.description}</p>
+    //         <span>{item.price}</span>
+    //     </div>
+    // );
+    // }
 
 
 
 
-const merchandiseItem = ({item}) => {
-    return (
-        <div className='merch-item'>
-            <img src="" alt="" />
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
-            <span>{item.price}</span>
-        </div>
-    );
-};
+
+
+    // const merchandiseList = ({ items }) => {
+    //     <div className="merch-list">
+    //         {items.map(item => (
+    //             <merchandiseItem key={item.id} item={item}/>
+    //         ))}
+    //     </div>
+    // }
 
 
 
-
-
-
-const merchandiseList = ({ items }) => {
-    <div className="merch-list">
-        {items.map(item => (
-            <merchandiseItem key={item.id} item={item}/>
-        ))}
-    </div>
+    // const merchandiseSection =({ title, items }) => {
+    //     return (
+    //         <section className='merch-section'>
+    //             <h2>{title}</h2>
+    //             <merchandiseList items={items}/>
+    //         </section>
+    //     )
+    // }
+    
+)
 }
-
-
-
-const merchandiseSection =({ title, items }) => {
-    return (
-        <section className='merch-section'>
-            <h2>{title}</h2>
-            <merchandiseList items={items}/>
-        </section>
-    )
-}
-
 export default Merchandise

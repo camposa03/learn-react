@@ -2,7 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
 
-const BmiCalculator = (props) => {
+
+function Bmi () {
+
+  
+  const BmiCalculator = (props) => {
     console.log(props);
     const [weight, setWeight] = useState('');
     const [height, setHeight] = useState('');
@@ -31,5 +35,6 @@ const BmiCalculator = (props) => {
       </div>
     )
   }
-
-  export default BmiCalculator;
+  
+}
+  export default Bmi;

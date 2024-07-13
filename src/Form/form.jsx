@@ -1,7 +1,14 @@
 import React from 'react'
-import BmiCalculator from '../BMI/BmiCalculator';
+import Bmi from '../BMI/BmiCalculator';
+import { useState } from 'react';
 
-const [firstName, setFirstName] = useState("");
+  
+
+function Form () {
+
+  
+  
+  const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [currentAge, setCurrentAge] = useState("");
   const [currentWeight, setCurrentWeight] = useState("");
@@ -9,13 +16,13 @@ const [firstName, setFirstName] = useState("");
   const [preferedDays, setPreferedDays] = useState("");
   const [conditions, setConditions] = useState("");
   const [contactNumber, setContactNumber] = useState("");
-
+  
   function handleFirstNameChange(event) {
     setFirstName(event.target.value);
   }
 
-
-
+  
+  
   function handleLastNameChange(event) {
     setLastName(event.target.value);
   }
@@ -32,7 +39,7 @@ const [firstName, setFirstName] = useState("");
     setCurrentWeight(event.target.value);
   }
 
-
+  
 
   function handleGoalWeightChange(event) {
     setGoalWeight(event.target.value);
@@ -56,6 +63,8 @@ const [firstName, setFirstName] = useState("");
     setContactNumber(event.target.value);
   }
 
+
+
   function handleSubmit(event) {
     event.preventDefault();
     const formValues = {
@@ -76,9 +85,12 @@ const [firstName, setFirstName] = useState("");
       console.log("invalid")
     };
   }
+  
+  return (
 
-
-<header>
+    
+    
+    <header>
 <div className='preForm'>
           <h1>Help us get to know you!</h1>
           <p>For us to give our best advice, please fill out the following form below!</p>
@@ -132,18 +144,20 @@ const [firstName, setFirstName] = useState("");
 
           <div>
             <h1>BMI Calculator</h1>
-            <BmiCalculator weight={currentWeight} />
+            <Bmi weight={currentWeight} />
           </div>
 
           <div>
             <p>Does this information look correct to you?<br />If so, please submit.</p>
           </div>
 
-          <button onClick='handleSumbit' type="submit">Submit</button>
-          <button onClick='reload()' type="submit">Clear</button>
+          <button onClick={handleSubmit} type="submit">Submit</button>
+          <button type="submit">Clear</button>
 
 
         </form>
 </header>
 
+  )  
+};
 export default Form

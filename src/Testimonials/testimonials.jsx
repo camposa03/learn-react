@@ -1,6 +1,10 @@
 import React from 'react'
 
-<div className="testimonials">
+function Testimonials () {
+
+        return (
+
+                <div className="testimonials">
         <h1>Testimonials</h1>
         <p>"Working with Martin has definetly given me a different outook on life!<br/>
         Not only have I seen massive change on my body, my way of thinking changed. Thanks Martin!"<br/>
@@ -19,6 +23,8 @@ import React from 'react'
         a great coach!"<br/>
         -John Doe</p>
         </div>
+        )    
 
+}
 
 export default Testimonials

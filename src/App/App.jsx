@@ -15,7 +15,7 @@ function App() {
       <About/>
       <Testimonials />
       <Form /> /*/didn't import bmi calculator because it is imported in our form/*/
-      <Merchandise />
+      {/* <Merchandise /> */}
       
 
         

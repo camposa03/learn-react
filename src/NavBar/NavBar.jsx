@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom/client'
 import Visionaries from '../assets/Visionaries.png'
 
 function NavBar() {
-<nav>
+
+return (
+
+    
+    <nav>
     <div className="header">
         <img src={Visionaries} alt="" />
         <ul className='nav-menu'>
@@ -30,6 +34,7 @@ function NavBar() {
     </div>
     </div>
 </nav>
+);
 };
 
 export default NavBar
