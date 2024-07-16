@@ -158,6 +158,6 @@ function Form () {
         </form>
 </header>
 
-  )  
+  );
 };
 export default Form
