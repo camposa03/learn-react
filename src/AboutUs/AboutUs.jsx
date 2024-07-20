@@ -2,12 +2,12 @@ import React from 'react'
 import '../AboutUs/AboutUs.css'
 
 
-function About (props) {
+function About(props) {
   console.log(props.data)
   return (
-    
+
     <div className="about">
-    <h1>About Us {props.name}</h1>
+      <h1>About Us {props.name}</h1>
       <p>Here at Sacred Visionaries, we pride ourselves in personal growth through fitness! We understand that your journey is unique. <br />
         Redefining your physical, mental, and spiritual relationships isn't easy. That's what we're here for! To guide those willing to <br />
         change their lives. From begginer to advanced, weights or calisthenics, and mindset to nutrition, we can help!<br />
@@ -24,21 +24,25 @@ function About (props) {
         <li>Positive community</li>
       </ul> <br />
 
-    
-      {props.data.map(item=>{
-        <h1>{item}</h1>
+
+      {props.data.map(item => {
+        return <>
+          <h1>{item.name}</h1>
+          <p>{item.experience}</p>
+          <p>{item.about}</p>
+        </>
       })}
-  
+
       <p>test</p>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     </div>
   );
-    
+
 }
 
 

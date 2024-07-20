@@ -15,8 +15,8 @@ function App() {
     },
     {
       name: "rudy",
-      experience:"trainer",
-      about: "trainer"
+      experience: "trainer",
+      about: "church"
     },
     {
       name: "sam",
@@ -35,28 +35,28 @@ function App() {
     }
   ]
 
-    return (
-      <>
+  return (
+    <>
       <NavBar />
-      <About data={names}/>
+      <About data={names} />
       <Testimonials />
       <Form /> /*/didn't import bmi calculator because it is imported in our form/*/
       {/* <Merchandise /> */}
-      
-
-        
-      
 
 
 
 
 
 
-      </>
 
-    );
 
-  
+
+
+    </>
+
+  );
+
+
 
 }
 
