@@ -24,10 +24,12 @@ function About (props) {
         <li>Positive community</li>
       </ul> <br />
 
-    <h1>Our Team</h1>
-      <p>So, who is our team? Meet the first group of Sacred Visionaries. A group dedicated to creating change.</p>
-  
     
+      {props.data.map(item=>{
+        <h1>{item}</h1>
+      })}
+  
+      <p>test</p>
     
     
     
