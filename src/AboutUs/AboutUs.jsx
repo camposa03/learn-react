@@ -2,25 +2,12 @@ import React from 'react'
 import '../AboutUs/AboutUs.css'
 
 
-function team(props) {
-
-    const Martin = { name: "Martin" , experience: "Army, Training", about: "Father" };
-    
-    const Rudy = { name: "Rudy" , experience: "Military, Personal Trainer", about: "Church" };
-    
-    const Sam = { name: "Sam" , experience: "Personal Training, Nutrition", about: "" };
-    
-    const Joey= { name: "Joey" , experience: "Personal Training, Calisthetics", about: "" };
-    
-    const Jesse = { name: "Jesse" , experience: "Sales, Coding", about: "DJ" };
-
-};
-
-function About () {
+function About (props) {
+  console.log(props.data)
   return (
     
     <div className="about">
-    <h1>About Us</h1>
+    <h1>About Us {props.name}</h1>
       <p>Here at Sacred Visionaries, we pride ourselves in personal growth through fitness! We understand that your journey is unique. <br />
         Redefining your physical, mental, and spiritual relationships isn't easy. That's what we're here for! To guide those willing to <br />
         change their lives. From begginer to advanced, weights or calisthenics, and mindset to nutrition, we can help!<br />
@@ -40,7 +27,6 @@ function About () {
     <h1>Our Team</h1>
       <p>So, who is our team? Meet the first group of Sacred Visionaries. A group dedicated to creating change.</p>
   
-    
     
     
     
