@@ -1,0 +1,96 @@
+.menu-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin: 0 auto;
+    width: min(100%, 1100px);
+
+}
+
+.menu-block a {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+li a{
+    background-color: transparent;
+    padding: 0 20px;
+    color: #a9aea8;
+
+}
+
+li a:hover{
+    color: #fff;
+
+}
+
+
+.logo:hover{
+    color: #fff;
+}
+
+.nav_mobile{
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+
+}
+
+.nav_mobile_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font: 500 60px "Poppins", sans-serif;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 831px) {
+    ul,.button,.closeIcon.material-icons{
+        display: none;
+    }
+}
+
+.menu,.menuIcon.material-icons{
+    display: block;
+}
+
+.button{
+    color: #06090f;
+    background-color: #a9aea8;
+    border-radius: 10px;
+    width: 55px;
+
+}
+
+.button:hover{
+    color: #fff;
+}
+
+.hero hero-l{
+    padding: 2rem;
+    padding-top: 1.5rem;
+    flex: 3;
+}
+
+.hero hero-r{
+    flex: 1;
+}

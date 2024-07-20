@@ -1,0 +1,25 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logo{ /*/listens here/*/
+  width: auto;
+  height: 20px;
+  
+}
+
+.nav-menu{
+  padding-top: 2.1rem;
+  float: right;
+}
+
