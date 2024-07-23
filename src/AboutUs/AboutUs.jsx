@@ -33,7 +33,7 @@ function About(props) {
         </>
       })}
 
-      <p>test</p>
+    
 
 
 
