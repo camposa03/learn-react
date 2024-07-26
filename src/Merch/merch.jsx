@@ -70,4 +70,4 @@ const CurrentCollections = () => {
 
 // )
 // }
-export default Merchandise
+// export default Merchandise

@@ -2,33 +2,38 @@ import About from '../AboutUs/AboutUs.jsx'
 import Form from '../Form/form.jsx'
 import NavBar from '../NavBar/NavBar.jsx';
 import Testimonials from '../Testimonials/testimonials.jsx';
-import Merchandise from '../Merch/merch.jsx';
+// import Merchandise from '../Merch/merch.jsx';
 
 
 
 function App() {
   let names = [
     {
+      id: 0,
       name: "martin",
       experience: "military",
       about: "father"
     },
     {
+      id: 1,
       name: "rudy",
       experience: "trainer",
       about: "church"
     },
     {
+      id: 2,
       name: "sam",
       experience: "nutrition, personal training",
       about: "",
     },
     {
+      id: 3,
       name: "joey",
       experience: "personal training",
       about: "",
     },
     {
+      id: 4,
       name: "jesse",
       experience: "sales, coding",
       about: "dj"

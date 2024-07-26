@@ -11,6 +11,7 @@ function Form () {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [currentAge, setCurrentAge] = useState("");
+  const [currentHeight, setCurrentHeight] = useState("");
   const [currentWeight, setCurrentWeight] = useState("");
   const [goalWeight, setGoalWeight] = useState("");
   const [preferedDays, setPreferedDays] = useState("");
@@ -31,6 +32,11 @@ function Form () {
 
   function handleCurrentAgeChange(event) {
     setCurrentAge(event.target.value);
+  }
+
+  
+  function handleCurrentHeightChange(event) {
+    setCurrentHeight(event.target.value);
   }
 
 
@@ -64,6 +70,10 @@ function Form () {
   }
 
 
+  function handleBmiChange(event) {
+    setBmi(event.target.value);
+  }
+
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -71,11 +81,13 @@ function Form () {
       firstName: firstName,
       lastName: lastName,
       currentAge: currentAge,
+      currentHeight: currentHeight,
       currentWeight: currentWeight,
       goalWeight: goalWeight,
       preferedDays: preferedDays,
       conditions: conditions,
-      contactNumber: contactNumber
+      contactNumber: contactNumber,
+      Bmi: Bmi
     };
 
     const isValid = validateForm(formValues);
@@ -108,6 +120,11 @@ function Form () {
 
           <label htmlFor="age">Current Age:</label>
           <input onChange={handleCurrentAgeChange} type="number" id="age" name="age" placeholder='Enter Here...' />
+          
+          <br />
+
+          <label htmlFor="height">Height (in):</label>
+          <input onChange={handleCurrentHeightChange} type="text" id="height" name="height" placeholder='Enter Here...' />
 
           <br />
 
@@ -134,18 +151,20 @@ function Form () {
           <label htmlFor="contact">Contact Number:</label>
           <input onChange={handleContactNumberChange} type="text" id="contact" name="contact" placeholder='Enter Here...' />
 
+          
+          <Bmi weight={currentWeight} height={currentHeight}/>
+          
           <p>Name: {firstName} {lastName}</p>
           <p>Age: {currentAge}</p>
+          <p>Height: {currentHeight}</p>
           <p>Current Weight: {currentWeight}</p>
           <p>Goal Weight: {goalWeight}</p>
           <p>Prefered Days of Exercise: {preferedDays}</p>
           <p>Health Conditions: {conditions}</p>
           <p>Contact Number: {contactNumber}</p>
+          <p>Body Mass Index: {Bmi}</p>
 
-          <div>
-            <h1>BMI Calculator</h1>
-            <Bmi weight={currentWeight} />
-          </div>
+          
 
           <div>
             <p>Does this information look correct to you?<br />If so, please submit.</p>

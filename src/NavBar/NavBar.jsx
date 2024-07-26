@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Visionaries from '../assets/Visionaries.png'
+import './NavBar.css'
 
 function NavBar() {
 

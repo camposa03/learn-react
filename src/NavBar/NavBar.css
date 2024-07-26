@@ -94,3 +94,8 @@ li a:hover{
 .hero hero-r{
     flex: 1;
 }
+
+.header img {
+    width: auto;
+    height: 105px;
+}
