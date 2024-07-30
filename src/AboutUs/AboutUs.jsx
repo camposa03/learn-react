@@ -19,9 +19,8 @@ function About(props) {
       <ul className='methodList'>
         <li>Fitness/</li>
         <li>Nutrition/</li>
-        <li>Philosophy/</li>
         <li>Mindset coaching/</li>
-        <li>Music/Sounds/</li>
+        <li>Music/</li>
         <li>Positive community</li>
       </ul>
 
