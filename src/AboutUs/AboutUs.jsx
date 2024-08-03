@@ -26,13 +26,13 @@ function About(props) {
 
       <br />
 
-      {props.data.map(item => {
+      { props.data ? props.data.map(item => {
         return <>
           <h1>{item.name}</h1>
           <p>{item.experience}</p>
           <p>{item.about}</p>
         </>
-      })}
+      }): null}
 
 
 
