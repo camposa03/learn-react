@@ -194,7 +194,7 @@ function App() {
           <Route element={<NavBar />}>
             <Route index element={<Home />} />
             <Route path="/about-us" element={<About />} />
-
+            
           </Route>
 
 
