@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Visionaries from '../assets/Visionaries.png'
 import './NavBar.css'
+import { Link } from "react-router-dom";
 
 function NavBar() {
 
@@ -13,7 +14,7 @@ return (
         <img src={Visionaries} alt="" />
         <ul className='nav-menu'>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><Link to="/about-us">About-Us</Link></li>
             <li><a href="#">Testimonials</a></li>
             <li><a href="#">Programs</a></li>   
             <li><a href="#">Merchandise</a></li>
