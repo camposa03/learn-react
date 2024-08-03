@@ -3,6 +3,7 @@ import About from '../AboutUs/AboutUs.jsx'
 import Form from '../Form/form.jsx'
 import NavBar from '../NavBar/NavBar.jsx';
 import Testimonials from '../Testimonials/testimonials.jsx';
+import Home from '../Home/home.jsx';
 
 
 
@@ -189,8 +190,13 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route index element={<NavBar />} />
-          <Route path="/about-us" element={<About />} />
+
+          <Route element={<NavBar />}>
+            <Route index element={<Home />} />
+            <Route path="/about-us" element={<About />} />
+
+          </Route>
+
 
         </Routes>
       </Router>
