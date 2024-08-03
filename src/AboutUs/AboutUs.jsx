@@ -35,12 +35,6 @@ function About(props) {
       }): null}
 
 
-
-
-
-
-
-
     </div>
   );
 
