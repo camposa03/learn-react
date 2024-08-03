@@ -2,7 +2,6 @@ import About from '../AboutUs/AboutUs.jsx'
 import Form from '../Form/form.jsx'
 import NavBar from '../NavBar/NavBar.jsx';
 import Testimonials from '../Testimonials/testimonials.jsx';
-// import Merchandise from '../Merch/merch.jsx';
 
 
 
@@ -173,7 +172,7 @@ function App() {
     },
     {
       Program: "Group Discussions",
-      Description: "Using religious/spiritual/philisophical topics, our mission is to help you build a better relationship with yourself, family, friends, and God. We believe a those who lift themselves can lift others, a strong (but safe) community!"
+      Description: "Using religious/spiritual/philisophical topics, our mission is to help you build a better relationship with yourself, family, friends, and God. We believe those who lift themselves can lift others, a strong (but safe) community!"
     },
     {
       Program: "Mindset Coaching",
