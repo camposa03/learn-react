@@ -20,6 +20,6 @@
 
 .nav-menu{
   padding-top: 2.1rem;
-  float: right;
+  justify-content: center;
 }
 

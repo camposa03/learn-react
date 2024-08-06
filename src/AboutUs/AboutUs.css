@@ -1,4 +1,6 @@
 .methodList {
     list-style: none; 
-}
+    justify-content: center;
+    padding: 20px;
 
+}
