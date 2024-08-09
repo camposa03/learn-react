@@ -156,8 +156,8 @@ function Form() {
 
         <p>Name: {firstName} {lastName}</p>
         <p>Age: {currentAge}</p>
-        <p>Height: {currentHeight}</p>
-        <p>Current Weight: {currentWeight}</p>
+        <p>Height (in): {currentHeight}</p>
+        <p>Current Weight (lbs): {currentWeight}</p>
         <p>Goal Weight: {goalWeight}</p>
         <p>Prefered Days of Exercise: {preferedDays}</p>
         <p>Health Conditions: {conditions}</p>

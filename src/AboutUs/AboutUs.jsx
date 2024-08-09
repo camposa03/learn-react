@@ -1,6 +1,6 @@
 import React from 'react'
 import '../AboutUs/AboutUs.css'
-
+import names from '../App/App.jsx'
 
 
 function About(props) {
@@ -25,14 +25,25 @@ function About(props) {
       </ul>
 
       <br />
+    
 
+    
+      {/* function Team() {
+        return (
+          <div>
+            
+          </div>
+        )
+      } */}
+
+{/* 
       { props.data ? props.data.map(item => {
         return <>
           <h1>{item.name}</h1>
           <p>{item.experience}</p>
           <p>{item.about}</p>
         </>
-      }): null}
+      }): null} */}
 
 
     </div>
