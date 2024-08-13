@@ -35,8 +35,9 @@ function NavBar() {
                 </div> */}
                 </div>
             </nav>
+            <footer className='footer'>Email xyz@businessmail.com for more information! You may also use our contact form, and we'll get back to you.</footer>
             <Outlet />
-            <footer>Footer</footer>
+            
         </>
     );
 };

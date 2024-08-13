@@ -98,4 +98,12 @@ li a:hover{
 .header img {
     width: auto;
     height: 105px;
+
+}
+
+
+
+.footer {
+   position: fixed;
+   bottom: 0;
 }

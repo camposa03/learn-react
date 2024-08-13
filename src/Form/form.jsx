@@ -104,7 +104,7 @@ function Form() {
 
     <header>
       <div className='preForm'>
-        <h1>Help us get to know you!</h1>
+        <h1>Contact Form</h1>
         <p>For us to give our best advice, please fill out the following form below!</p>
       </div>
       <form action="#" onSubmit={handleSubmit}>
