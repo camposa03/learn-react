@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Visionaries from '../assets/Visionaries.png'
 import './NavBar.css'
 import { Link } from "react-router-dom";
@@ -21,10 +21,9 @@ function NavBar() {
     return (
         <>
             <nav className={nav ? "nav active" : "nav"}>
-                <Link to="#" className='logo'><img src={Visionaries}></img></Link>
+                <Link to="/" className='logo'><img src={Visionaries}></img></Link>
 
-                <input className='menu-btn' type='checkbox' id='menu-btn' />
-                <label className='menu-icon' for='menu-btn'></label>
+
                 <span className='nav-icon'></span>
 
                 <ul className='menu'>
@@ -34,7 +33,7 @@ function NavBar() {
                     <ul><Link to="/Programs">Programs</Link></ul>
                     <ul><Link to="/Contact">Contact</Link></ul>
                 </ul>
-                    {/* <div className='menu'>
+                {/* <div className='menu'>
                     <i className='menuIcon material-icons'>menu</i>
                     <i className='closeIcon material-icons'>close</i>
                     </div>
@@ -49,9 +48,9 @@ function NavBar() {
                     </div>
                     </div> */}
             </nav>
-            <footer className='footer'>Email xyz@businessmail.com for more information! You may also use our contact form, and we'll get back to you.</footer>
+
             <Outlet />
-            
+            <footer className='footer'>Email xyz@businessmail.com for more information! You may also use our contact form, and we'll get back to you.</footer>
         </>
     );
 };

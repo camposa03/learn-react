@@ -27,7 +27,7 @@ import '../Programs/Programs.css'
 
 function Programs() {
     return (
-        <div>
+        <div className='programs'>
            <h1>Nutrition</h1>
            <p>You can never out-train a bad diet, as it is just as important as physical exercise! Get your eating habits right with our tasty, yet effective meal plans!</p>
 
@@ -38,7 +38,7 @@ function Programs() {
 
            <br />
 
-           <h1>Calisthenis</h1>
+           <h1>Calisthenics</h1>
            <p>A great alternative to our Weight-Training program! Calisthenics is exercising using little to no equipment! Such as, your own bodyweight. Another fun way to achive your personal physique goals!</p>
 
            <br />
