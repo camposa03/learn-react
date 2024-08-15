@@ -28,6 +28,12 @@ import '../Programs/Programs.css'
 function Programs() {
     return (
         <div className='programs'>
+
+        <div className='programs-intro'>
+            <h1>Our Services</h1>
+            <p>Here is a quick summary of our different services and why it might be for you!</p>
+        </div>
+
            <h1>Nutrition</h1>
            <p>You can never out-train a bad diet, as it is just as important as physical exercise! Get your eating habits right with our tasty, yet effective meal plans!</p>
 
@@ -50,7 +56,23 @@ function Programs() {
 
            <h1>Music</h1>
            <p>Music heals, and we utilize this tool to do exactly that! From your favorite tunes, to ones suggested by our peers, personalized playlists and live mixes from our in-house DJ give us that extra boost we need throughout our day.</p>
-        
+           
+           <br />
+
+           <br />
+           
+           <br />
+
+           <br />
+
+           <br />
+
+           <br />
+
+           <br />
+           
+           <br />
+
         </div>
     );
 }

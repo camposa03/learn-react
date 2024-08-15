@@ -1,6 +1,29 @@
+
+/* listens here */
 .methodList {
     list-style: none; 
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
+    font-family: "Baskervville SC", serif;
+    font-size: 20px;
+}
 
+.about {
+    padding-top: 175px;
+  }
+
+.mission {
+    margin-bottom: 45px;
+}
+
+.team-intro {
+    padding-top: 80px;
+}
+
+.team {
+    margin: 105px;
+}
+
+.team h1 {
+    margin: 50px;
 }

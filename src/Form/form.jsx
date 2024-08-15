@@ -1,7 +1,7 @@
 import React from 'react'
 import Bmi from '../BMI/BmiCalculator';
 import { useState } from 'react';
-
+import '../Form/form.css'
 
 
 function Form() {

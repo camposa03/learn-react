@@ -104,7 +104,12 @@ nav ul {
 h1{
   font-family: "Baskervville SC", serif;
   font-size: 55px;
-  padding-top: 80px;
+}
+
+h2 {
+  font-family: "Baskervville SC", serif;
+  font-size: 35px;
+  padding-top: 45px;
 }
 
 button {
@@ -195,4 +200,5 @@ form button:hover{
   position: fixed;
   bottom: 0;
 }
+
 
