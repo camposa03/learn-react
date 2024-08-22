@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
 
 
@@ -7,7 +6,6 @@ function Bmi () {
 
   
   const BmiCalculator = (props) => {
-    console.log(props);
     const [weight, setWeight] = useState('');
     const [height, setHeight] = useState('');
     const [bmi, setBmi] = useState('');
@@ -22,13 +20,10 @@ function Bmi () {
     return (
       <div>
         <input type="number"
-          placeholder="Height (cm)"
+          placeholder="Height (in)"
           value={height}
           onChange={(e) => setHeight(e.target.value)} 
           />
-          <button onClick={calculateBMI}>
-            Calculate BMI
-          </button>
           {bmi && <div>BMI:
             {bmi.toFixed(2)}</div>}
         
