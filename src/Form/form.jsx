@@ -4,69 +4,32 @@ import { useState } from 'react';
 import '../Form/form.css'
 import validateForm from '../../validateForm';
 
-function  Bmi() {
-      const bmiCalculator = (props) => {
-        const [weight, setWeight] = useState('');
-        const [height, setHeight] = useState('');
-        const [bmi, setBmi] = useState('');
-
-        const calculateBMI = () => {
-          const heightInInch = parseFloat(height);
-          const weightByPound = parseFloat(weight);
-          if (heightInInch > 0 && weightByPound > 0) {
-          const tempBmi = (weightByPound / (heightInInch * heightInInch)) * 703;
-          setBmi(bmiValue.toFixed(2));
-        };
-    };
-  };
-};
 
 function Form() {
 
-
-
-      function  Bmi() {
-          const bmiCalculator = (props) => {
-            const [weight, setWeight] = useState('');
-            const [height, setHeight] = useState('');
-            const [bmi, setBmi] = useState('');
-
-            const calculateBMI = () => {
-              const heightInInch = parseFloat(height);
-              const weightByPound = parseFloat(weight);
-              if (heightInInch > 0 && weightByPound > 0) {
-              const tempBmi = (weightByPound / (heightInInch * heightInInch)) * 703
-              setBmi(bmiValue.toFixed(2));
-            };
-        };
-      };
-    };
-
-
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [currentAge, setCurrentAge] = useState("");
-    const [weight, setWeight] = useState('');
-    const [height, setHeight] = useState('');
-    const [goalWeight, setGoalWeight] = useState("");
-    const [preferedDays, setPreferedDays] = useState("");
-    const [conditions, setConditions] = useState("");
-    const [contactNumber, setContactNumber] = useState("");
-    const [bmi, setBmi] = useState("")
-
-    function handleFirstNameChange(event) {
-      setFirstName(event.target.value);
-    }
-
-
-
-    function handleLastNameChange(event) {
-      setLastName(event.target.value);
-    }
-
-
-
-    function handleCurrentAgeChange(event) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [currentAge, setCurrentAge] = useState("");
+  const [height, setCurrentHeight] = useState("");
+  const [weight, setCurrentWeight] = useState("");
+  const [goalWeight, setGoalWeight] = useState("");
+  const [preferedDays, setPreferedDays] = useState("");
+  const [conditions, setConditions] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  
+  function handleFirstNameChange(event) {
+    setFirstName(event.target.value);
+  }
+  
+  
+  
+  function handleLastNameChange(event) {
+    setLastName(event.target.value);
+  }
+  
+  
+  
+  function handleCurrentAgeChange(event) {
       setCurrentAge(event.target.value);
     }
 
@@ -81,36 +44,36 @@ function Form() {
       setCurrentWeight(event.target.value);
     }
 
-
-
+    
+    
     function handleGoalWeightChange(event) {
       setGoalWeight(event.target.value);
     }
 
-
-
+    
+    
     function handlePreferedDaysChange(event) {
       setPreferedDays(event.target.value);
     }
-
-
-
+    
+    
+    
     function handleConditionsChange(event) {
       setConditions(event.target.value);
     }
 
 
-
+    
     function handleContactNumberChange(event) {
       setContactNumber(event.target.value);
     }
-
-
+    
+    
     function handleBmiChange(event) {
       setBmi(event.target.value);
     }
-
-
+    
+    
     function handleSubmit(event) {
       event.preventDefault();
       const formValues = {
@@ -123,7 +86,6 @@ function Form() {
         preferedDays: preferedDays,
         conditions: conditions,
         contactNumber: contactNumber,
-        Bmi: setBmi
       };
 
       const isValid = validateForm(formValues);
@@ -133,9 +95,10 @@ function Form() {
         console.log("invalid")
       };
     }
-
+    
+  
     return (
-
+      
 
 
       <header>
@@ -160,12 +123,12 @@ function Form() {
           <br />
 
           <label htmlFor="height">Height (in):</label>
-          <input type="number" placeholder="Height (in)" value={height} onChange={(e) => setHeight(e.target.value)} />
+          <input type="number" onChange={handleCurrentHeightChange} placeholder="Height (in)" id="height" />
 
           <br />
 
           <label htmlFor="weight">Current Weight:</label>
-          <input type="number" placeholder="Weight (lbs)" value={weight} onChange={(e) => setWeight(e.target.value)} />
+          <input type="number" onChange={handleCurrentWeightChange} placeholder="Weight (lbs)" id="weight" />
 
           <br />
 
@@ -188,7 +151,7 @@ function Form() {
           <input onChange={handleContactNumberChange} type="text" id="contact" name="contact" placeholder='Enter Here...' />
 
 
-          <Bmi />
+          {/* <Bmi /> */}
 
           <p>Name: {firstName} {lastName}</p>
           <p>Age: {currentAge}</p>
@@ -198,7 +161,7 @@ function Form() {
           <p>Prefered Days of Exercise: {preferedDays}</p>
           <p>Health Conditions: {conditions}</p>
           <p>Contact Number: {contactNumber}</p>
-          <p>Body Mass Index: {setBmi}</p>
+
 
 
 
@@ -206,7 +169,7 @@ function Form() {
             <p>Does this information look correct to you?<br />If so, please submit.</p>
           </div>
 
-          <button onClick={setBmi}>Calculate BMI</button>
+
           <button onClick={handleSubmit} type="submit">Submit</button>
           <button type="submit">Clear</button>
           

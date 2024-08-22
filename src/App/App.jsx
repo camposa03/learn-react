@@ -6,6 +6,7 @@ import NavBar from '../NavBar/NavBar.jsx';
 import Testimonials from '../Testimonials/testimonials.jsx';
 import Programs from '../Programs/Programs.jsx';
 import Home from '../Home/home.jsx';
+import Bmi from '../BMI/BmiCalculator.jsx';
 
 
 
@@ -83,6 +84,7 @@ function App() {
             <Route path="/About-us" element={<About />} />
             <Route path="/Testimonials" element={<Testimonials />} />
             <Route path="/Programs" element={<Programs />} />
+            <Route path="/BMI-Calculator" element={<Bmi/>}></Route>
             <Route path="/Contact" element={<Form />} />
           </Route>
 

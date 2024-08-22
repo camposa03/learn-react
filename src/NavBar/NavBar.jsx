@@ -31,6 +31,7 @@ function NavBar() {
                     <ul><Link to="/about-us">About-Us</Link></ul>
                     <ul><Link to="/Testimonials">Testimonials</Link></ul>
                     <ul><Link to="/Programs">Programs</Link></ul>
+                    <ul><Link to="/BMI-Calculator">BMI Calculator</Link></ul>
                     <ul><Link to="/Contact">Contact</Link></ul>
                 </ul>
                 {/* <div className='menu'>

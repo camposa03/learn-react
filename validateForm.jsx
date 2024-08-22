@@ -1,23 +1,12 @@
 
 function validateForm(formValues) {
 
-  if (formValues.firstName.trim() === "" ||
-    formValues.lastName.trim() === "" ||
-    formValues.currentAge.trim() === "" ||
-    formValues.currentWeight.trim() === "" ||
-    formValues.goalWeight.trim() === "" ||
-    formValues.preferedDays.trim() === "" ||
-    formValues.conditions.trim() === "" ||
-    formValues.contactNumber.trim() === ""
-  ) {
-    return false;
-  }
-  const currentAgeNum = isNaN(parseInt(formValues.currentAge, 10));
+  const currentAgeNum = isNaN(parseInt(formValues.currentAge, 100));
   console.log(currentAgeNum)
   if (currentAgeNum) {
     return false;
   }
-  const currentWeightNum = isNaN(parseInt(formValues.currentWeightNum, 10));
+  const currentWeightNum = isNaN(parseInt(formValues.currentWeightNum, 1000));
   console.log(currentWeightNum)
   if (currentWeightNum) {
     return false;
@@ -44,7 +33,7 @@ function validateForm(formValues) {
     formValues.goalWeight.trim() === "" ||
     formValues.preferedDays.trim() === "" ||
     formValues.conditions.trim() === "" ||
-    formValues.contactNumber.trim() === ""
+    formValues.contactNumber.trim() === "" 
   ) {
     return false;
   }
