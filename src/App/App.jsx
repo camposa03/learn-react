@@ -84,7 +84,7 @@ function App() {
             <Route path="/About-us" element={<About />} />
             <Route path="/Testimonials" element={<Testimonials />} />
             <Route path="/Programs" element={<Programs />} />
-            <Route path="/BMI-Calculator" element={<Bmi/>}></Route>
+            <Route path="/BMI-Calculator" element={<Bmi />}></Route>
             <Route path="/Contact" element={<Form />} />
           </Route>
 
