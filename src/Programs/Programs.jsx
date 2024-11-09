@@ -58,21 +58,7 @@ function Programs() {
            <p>Music heals, and we utilize this tool to do exactly that! From your favorite tunes, to ones suggested by our peers, personalized playlists and live mixes from our in-house DJ give us that extra boost we need throughout our day.</p>
            
            <br />
-
-           <br />
            
-           <br />
-
-           <br />
-
-           <br />
-
-           <br />
-
-           <br />
-           
-           <br />
-
         </div>
     );
 }

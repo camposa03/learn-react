@@ -93,7 +93,9 @@ function Form() {
     const isValid = validateForm(formValues);
     if (isValid) {
       console.log("valid")
-      let response = await getData();
+      // let response = await getData();
+      const url = "http://localhost:3000/fitness";
+      let response = await postData(url, formValues) /*/form values = data passed into postData, dont get confused /*/
       console.log(response);
     } else {
       console.log("invalid")
@@ -114,6 +116,23 @@ function Form() {
     } catch (error) {
       console.error(error.message);
     }
+  }
+
+  async function postData(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json(); // parses JSON response into native JavaScript objects
   }
 
 
@@ -182,7 +201,7 @@ function Form() {
         <p>Prefered Days of Exercise: {preferedDays}</p>
         <p>Health Conditions: {conditions}</p>
         <p>Contact Number: {contactNumber}</p>
-  
+
         <p>Response from server: {serverResponse}</p>
 
 

@@ -34,23 +34,11 @@ function NavBar() {
                     <ul><Link to="/BMI-Calculator">BMI Calculator</Link></ul>
                     <ul><Link to="/Contact">Contact</Link></ul>
                 </ul>
-                {/* <div className='menu'>
-                    <i className='menuIcon material-icons'>menu</i>
-                    <i className='closeIcon material-icons'>close</i>
-                    </div>
-                    <div className='nav_mobile'>
-                    <div className='nav_mobile_content'>
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">Programs</a>
-                    <a href="#">Merchandise</a>
-                    <a href="#">Contact</a>
-                    </div>
-                    </div> */}
             </nav>
 
             <Outlet />
+
+
             <footer className='footer'>Email xyz@businessmail.com for more information! You may also use our contact form, and we'll get back to you.</footer>
         </>
     );
