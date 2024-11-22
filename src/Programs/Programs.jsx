@@ -1,66 +1,50 @@
-import React from 'react'
-import '../Programs/Programs.css'
+import React from 'react';
+import '../Programs/Programs.css';
 
-// let Program = [
-//     {
-//         Program: "Nutrition",
-//         Description: "You can never out-train a bad diet, as it is just as important as physical exercise! Get your eating habits right with our tasty, yet effective meal plans!"
-//     },
-//     {
-//         Program: "Weight-Training",
-//         Description: "Weight-Training is a way to get your body moving! Weight loss or muscle gain, it doesn't matter! Our Weight-Training programs are designed (along with our Nutrition Program) to achieve your ideal physique."
-//     },
-//     {
-//         Program: "Calisthenics",
-//         Description: "A great alternative to our Weight-Training program! Calisthenics is exercising using little to no equipment! Such as, your own bodyweight. Another fun way to achive your personal physique goals!"
-//     },
-//     {
-//         Program: "Group Discussions",
-//         Description: "Using religious/spiritual/philisophical topics, our mission is to help you build a better relationship with yourself, family, friends, and God. We believe a those who lift themselves can lift others, a strong (but safe) community!"
-//     },
-//     {
-//         Program: "Music",
-//         Description: "Music heals, and we utilize this tool to do exactly that! From your favorite tunes, to ones suggested by our peers, personalized playlists and live mixes from our in-house DJ give us that extra boost we need throughout our day."
-//     },
-// ]
+// Placeholder images for the programs
+// import nutritionImg from '../assets/nutrition.jpg';
+// import weightTrainingImg from '../assets/weight_training.jpg';
+// import calisthenicsImg from '../assets/calisthenics.jpg';
+// import discussionsImg from '../assets/group_discussions.jpg';
 
 
 function Programs() {
     return (
         <div className='programs'>
 
-        <div className='programs-intro'>
-            <h1>Our Services</h1>
-            <p>Here is a quick summary of our different services and why it might be for you!</p>
-        </div>
+            {/* Introduction Section */}
+            <div className='programs-intro'>
+                <h1>Our Services</h1>
+                <p>Here is a quick summary of our different services and why it might be for you!</p>
+            </div>
 
-           <h1>Nutrition</h1>
-           <p>You can never out-train a bad diet, as it is just as important as physical exercise! Get your eating habits right with our tasty, yet effective meal plans!</p>
+            {/* Program Sections */}
+            <div className='program-section'>
+                <img  alt='Nutrition Program' className='program-image' />
+                <h1>Nutrition</h1>
+                <p>You can never out-train a bad diet, as it is just as important as physical exercise! Get your eating habits right with our tasty, yet effective meal plans!</p>
+            </div>
 
-           <br />
+            <div className='program-section'>
+                <img alt='Weight Training Program' className='program-image' />
+                <h1>Weight Training</h1>
+                <p>Weight-Training is a way to get your body moving! Weight loss or muscle gain, it doesn't matter! Our Weight-Training programs are designed (along with our Nutrition Program) to achieve your ideal physique.</p>
+            </div>
 
-           <h1>Weight Training</h1>
-           <p>Weight-Training is a way to get your body moving! Weight loss or muscle gain, it doesn't matter! Our Weight-Training programs are designed (along with our Nutrition Program) to achieve your ideal physique.</p>
+            <div className='program-section'>
+                <img alt='Calisthenics Program' className='program-image' />
+                <h1>Calisthenics</h1>
+                <p>A great alternative to our Weight-Training program! Calisthenics is exercising using little to no equipment! Such as, your own bodyweight. Another fun way to achieve your personal physique goals!</p>
+            </div>
 
-           <br />
+            <div className='program-section'>
+                <img alt='Group Discussions Program' className='program-image' />
+                <h1>Group Discussions</h1>
+                <p>Using religious/spiritual/philosophical topics, our mission is to help you build a better relationship with yourself, family, friends, and God. We believe those who lift themselves can lift others, creating a strong (but safe) community!</p>
+            </div>
 
-           <h1>Calisthenics</h1>
-           <p>A great alternative to our Weight-Training program! Calisthenics is exercising using little to no equipment! Such as, your own bodyweight. Another fun way to achive your personal physique goals!</p>
-
-           <br />
-
-           <h1>Group Discussions</h1>
-           <p>Using religious/spiritual/philisophical topics, our mission is to help you build a better relationship with yourself, family, friends, and God. We believe a those who lift themselves can lift others, a strong (but safe) community!</p>
-
-           <br />
-
-           <h1>Music</h1>
-           <p>Music heals, and we utilize this tool to do exactly that! From your favorite tunes, to ones suggested by our peers, personalized playlists and live mixes from our in-house DJ give us that extra boost we need throughout our day.</p>
-           
-           <br />
-           
         </div>
     );
 }
 
-export default Programs
+export default Programs;

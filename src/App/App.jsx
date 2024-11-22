@@ -27,18 +27,6 @@ function App() {
     },
     {
       id: 2,
-      name: "sam",
-      experience: "nutrition, personal training",
-      about: "",
-    },
-    {
-      id: 3,
-      name: "joey",
-      experience: "personal training",
-      about: "",
-    },
-    {
-      id: 4,
       name: "jesse",
       experience: "sales, coding",
       about: "dj"

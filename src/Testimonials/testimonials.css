@@ -1,11 +1,81 @@
+/* Main container */
 .testimonials {
     padding-top: 125px;
+    text-align: center;
+    background: linear-gradient(to bottom, #000000, #434343); /* Black to Chrome gradient */
+    color: #fff;
+    font-family: "Poppins", sans-serif;
 }
 
+/* Header styling */
+.testimonials h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e0e0e0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Reviews section */
 .reviews {
-    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
 }
 
-.reviews p {
-    margin: 100px;
+/* Individual testimonial cards */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Images styling */
+.testimonial-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.before-img, .after-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.before-img:hover, .after-img:hover {
+    transform: scale(1.1);
+    border-color: #ffd700; /* Golden highlight on hover */
+}
+
+/* Text styling */
+.testimonial-comment {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    font-style: italic;
+    color: #cfcfcf;
+}
+
+.testimonial-name {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 5px;
+    letter-spacing: 1px;
 }

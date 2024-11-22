@@ -45,3 +45,8 @@ function NavBar() {
 };
 
 export default NavBar
+
+
+
+
+// by any chance while you looked at my navbar code, there is an Outlet at the end somewhere, i have an issue with my footer being in the middle of my screen for my Contact tab

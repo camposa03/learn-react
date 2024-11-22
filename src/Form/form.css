@@ -1,3 +1,159 @@
-.preForm {
-    margin-top: 175px;
-}
+/* Ensure the body and html take full width and height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height of viewport */
+    width: 100%;  /* Full width of viewport */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* General form container styling */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 500px; /* Set a max-width for the form */
+    margin: 0 auto; /* Center horizontally */
+    background-color: #2c2f38;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    min-height: 100vh;
+    box-sizing: border-box; /* Include padding and border in width/height */
+    overflow: hidden; /* Prevent form overflow */
+  }
+  
+  /* Preform section styling (title and description) */
+  .preForm {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .preForm h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #9b4dff;
+    margin-bottom: 10px;
+  }
+  
+  .preForm p {
+    color: #ccc;
+    font-size: 16px;
+  }
+  
+  /* Form input fields styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center; /* Ensure inputs are centered */
+  }
+  
+  /* Label styling */
+  form label {
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  /* Input field styling */
+  form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #3e454d;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 55%; /* Make inputs 55% of form width */
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Input field focus effect */
+  form input:focus {
+    border-color: #9b4dff;
+    outline: none;
+    background: #444;
+  }
+  
+  /* Paragraph styling for form display */
+  form p {
+    color: #fff;
+    font-size: 16px;
+    margin: 5px 0;
+    text-align: left;
+  }
+  
+  /* Buttons styling */
+  button {
+    background-color: #9b4dff;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #7a38e6;
+  }
+  
+  /* Clear button styles */
+  button[type='button'] {
+    background-color: #f44336;
+  }
+  
+  button[type='button']:hover {
+    background-color: #e57373;
+  }
+  
+  /* Ensure the footer stays at the bottom */
+  footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #2c2f38;
+    color: #fff;
+    width: 100%;
+  }
+  
+  /* Ensure the page looks good on small screens */
+  @media only screen and (max-width: 480px) {
+    header {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    .preForm h1 {
+      font-size: 24px;
+    }
+  
+    form input {
+      font-size: 14px;
+      padding: 8px;
+      width: 100%; /* Make inputs full width on small screens */
+    }
+  
+    button {
+      font-size: 16px;
+    }
+  
+    button[type='button'] {
+      font-size: 16px;
+    }
+  }
+  

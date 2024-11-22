@@ -1,12 +1,8 @@
-import React from 'react'
-// import Bmi from '../BMI/BmiCalculator';
-import { useState } from 'react';
-import '../Form/form.css'
+import React, { useState } from 'react';
+import '../Form/form.css';
 import validateForm from '../../validateForm';
 
-
 function Form() {
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [currentAge, setCurrentAge] = useState("");
@@ -18,63 +14,41 @@ function Form() {
   const [contactNumber, setContactNumber] = useState("");
   const [serverResponse, setServerResponse] = useState("");
 
-
   function handleFirstNameChange(event) {
     setFirstName(event.target.value);
   }
-
-
 
   function handleLastNameChange(event) {
     setLastName(event.target.value);
   }
 
-
-
   function handleCurrentAgeChange(event) {
     setCurrentAge(event.target.value);
   }
-
 
   function handleCurrentHeightChange(event) {
     setCurrentHeight(event.target.value);
   }
 
-
-
   function handleCurrentWeightChange(event) {
     setCurrentWeight(event.target.value);
   }
-
-
 
   function handleGoalWeightChange(event) {
     setGoalWeight(event.target.value);
   }
 
-
-
   function handlePreferedDaysChange(event) {
     setPreferedDays(event.target.value);
   }
-
-
 
   function handleConditionsChange(event) {
     setConditions(event.target.value);
   }
 
-
-
   function handleContactNumberChange(event) {
     setContactNumber(event.target.value);
   }
-
-
-  function handleBmiChange(event) {
-    setBmi(event.target.value);
-  }
-
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -82,141 +56,88 @@ function Form() {
       firstName: firstName,
       lastName: lastName,
       currentAge: currentAge,
-      currentHeight: height,
+      currentHeight: currentHeight,
       currentWeight: currentWeight,
       goalWeight: goalWeight,
       preferedDays: preferedDays,
       conditions: conditions,
-      contactNumber: contactNumber,
+      contactNumber: contactNumber
     };
 
     const isValid = validateForm(formValues);
     if (isValid) {
-      console.log("valid")
-      // let response = await getData();
+      console.log("valid");
       const url = "http://localhost:3000/fitness";
-      let response = await postData(url, formValues) /*/form values = data passed into postData, dont get confused /*/
+      let response = await postData(url, formValues);
       console.log(response);
     } else {
-      console.log("invalid")
-    };
-  }
-
-  async function getData() {
-    const url = "http://localhost:3000";
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
-
-      const json = await response.json();
-      setServerResponse(json);
-      console.log(json);
-    } catch (error) {
-      console.error(error.message);
+      console.log("invalid");
     }
   }
 
   async function postData(url = '', data = {}) {
-    // Default options are marked with *
     const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
+      body: JSON.stringify(data),
     });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    return await response.json(); // parses JSON response into native JavaScript objects
+    return await response.json();
   }
 
-
-
   return (
-
-
-
     <header>
       <div className='preForm'>
         <h1>Contact Form</h1>
         <p>For us to give our best advice, please fill out the following form below!</p>
       </div>
-      <form action="#" onSubmit={handleSubmit}>
+
+      <form onSubmit={handleSubmit}>
         <label htmlFor="fname">First Name:</label>
-        <input onChange={handleFirstNameChange} type="text" id="name" name="fname" placeholder='Enter Here...' />
-
-        <br />
-
+          <input onChange={handleFirstNameChange} type="text" id="fname" placeholder="Enter Here..." />
         <label htmlFor="lname">Last Name:</label>
-        <input onChange={handleLastNameChange} type="text" id="lname" name="lname" placeholder='Enter Here...' />
-
-        <br />
-
+          <input onChange={handleLastNameChange} type="text" id="lname" placeholder="Enter Here..." />
         <label htmlFor="age">Current Age:</label>
-        <input onChange={handleCurrentAgeChange} type="number" id="age" name="age" placeholder='Enter Here...' />
-
-        <br />
-
+          <input onChange={handleCurrentAgeChange} type="number" id="age" placeholder="Enter Here..." />
         <label htmlFor="height">Height (in):</label>
-        <input type="number" onChange={handleCurrentHeightChange} placeholder="Height (in)" id="height" />
-
-        <br />
-
+          <input onChange={handleCurrentHeightChange} type="number" id="height" placeholder="Height (in)" />
         <label htmlFor="weight">Current Weight:</label>
-        <input type="number" onChange={handleCurrentWeightChange} placeholder="Weight (lbs)" id="weight" />
-
-        <br />
-
+          <input onChange={handleCurrentWeightChange} type="number" id="weight" placeholder="Weight (lbs)" />
         <label htmlFor="goal">Weight Goal:</label>
-        <input onChange={handleGoalWeightChange} type="text" id="goal" name="goal" placeholder='Enter Here...' />
-
-        <br />
-
-        <label htmlFor="days">Prefered Days of Exercise:</label>
-        <input onChange={handlePreferedDaysChange} type="text" id="days" name="days" placeholder='Enter Here...' />
-
-        <br />
-
+          <input onChange={handleGoalWeightChange} type="text" id="goal" placeholder="Enter Here..." />
+        <label htmlFor="days">Preferred Days of Exercise:</label>
+          <input onChange={handlePreferedDaysChange} type="text" id="days" placeholder="Enter Here..." />
         <label htmlFor="conditions">Health Conditions:</label>
-        <input onChange={handleConditionsChange} type="text" id="conditions" name="conditions" placeholder='Enter Here...' />
-
-        <br />
-
+          <input onChange={handleConditionsChange} type="text" id="conditions" placeholder="Enter Here..." />
         <label htmlFor="contact">Contact Number:</label>
-        <input onChange={handleContactNumberChange} type="text" id="contact" name="contact" placeholder='Enter Here...' />
-
-
-        {/* <Bmi /> */}
-
+        <input onChange={handleContactNumberChange} type="text" id="contact" placeholder="Enter Here..." />
+          
         <p>Name: {firstName} {lastName}</p>
         <p>Age: {currentAge}</p>
         <p>Height (in): {height}</p>
         <p>Current Weight (lbs): {currentWeight}</p>
         <p>Goal Weight: {goalWeight}</p>
-        <p>Prefered Days of Exercise: {preferedDays}</p>
+        <p>Preferred Days of Exercise: {preferedDays}</p>
         <p>Health Conditions: {conditions}</p>
         <p>Contact Number: {contactNumber}</p>
 
         <p>Response from server: {serverResponse}</p>
 
-
         <div>
           <p>Does this information look correct to you?<br />If so, please submit.</p>
         </div>
 
-
-        <button onClick={handleSubmit} type="submit">Submit</button>
-        <button type="submit">Clear</button>
-
-
+        <button type="submit">Submit</button>
+        <button type="button">Clear</button>
       </form>
     </header>
-
   );
-};
-export default Form
+}
+
+export default Form;

@@ -1,8 +1,46 @@
 .programs {
     margin-top: 80px;
+    font-family: 'Baskervville SC', serif;
+    color: #f0f0f0;
+    text-align: center;
 }
 
 .programs-intro {
     margin-top: 175px;
     margin-bottom: 150px;
+}
+
+.program-section {
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.program-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.program-image:hover {
+    transform: scale(1.05);
+}
+
+.program-section h1 {
+    font-size: 2.2rem;
+    margin: 20px 0;
+    color: #d6d6d6;
+    text-transform: uppercase;
+}
+
+.program-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 600px;
+    color: #cfcfcf;
 }
