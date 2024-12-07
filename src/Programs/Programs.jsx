@@ -1,12 +1,9 @@
 import React from 'react';
 import '../Programs/Programs.css';
-
-// Placeholder images for the programs
-// import nutritionImg from '../assets/nutrition.jpg';
-// import weightTrainingImg from '../assets/weight_training.jpg';
-// import calisthenicsImg from '../assets/calisthenics.jpg';
-// import discussionsImg from '../assets/group_discussions.jpg';
-
+import Diet from '../assets/Diet.jpg'
+import Lifting from '../assets/Lifting.jpg'
+import Calisthenic from '../assets/Calisthenic.jpg'
+import GroupFit from '../assets/GroupFit.jpg'
 
 function Programs() {
     return (
@@ -20,25 +17,25 @@ function Programs() {
 
             {/* Program Sections */}
             <div className='program-section'>
-                <img  alt='Nutrition Program' className='program-image' />
+                <img  src={Diet} className='program-image' />
                 <h1>Nutrition</h1>
                 <p>You can never out-train a bad diet, as it is just as important as physical exercise! Get your eating habits right with our tasty, yet effective meal plans!</p>
             </div>
 
             <div className='program-section'>
-                <img alt='Weight Training Program' className='program-image' />
+                <img src={Lifting} className='program-image' />
                 <h1>Weight Training</h1>
                 <p>Weight-Training is a way to get your body moving! Weight loss or muscle gain, it doesn't matter! Our Weight-Training programs are designed (along with our Nutrition Program) to achieve your ideal physique.</p>
             </div>
 
             <div className='program-section'>
-                <img alt='Calisthenics Program' className='program-image' />
+                <img src={Calisthenic} className='program-image' />
                 <h1>Calisthenics</h1>
                 <p>A great alternative to our Weight-Training program! Calisthenics is exercising using little to no equipment! Such as, your own bodyweight. Another fun way to achieve your personal physique goals!</p>
             </div>
 
             <div className='program-section'>
-                <img alt='Group Discussions Program' className='program-image' />
+                <img src={GroupFit} className='program-image' />
                 <h1>Group Discussions</h1>
                 <p>Using religious/spiritual/philosophical topics, our mission is to help you build a better relationship with yourself, family, friends, and God. We believe those who lift themselves can lift others, creating a strong (but safe) community!</p>
             </div>

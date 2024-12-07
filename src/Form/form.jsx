@@ -6,7 +6,7 @@ function Form() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [currentAge, setCurrentAge] = useState("");
-  const [height, setCurrentHeight] = useState("");
+  const [currentHeight, setCurrentHeight] = useState("");
   const [currentWeight, setCurrentWeight] = useState("");
   const [goalWeight, setGoalWeight] = useState("");
   const [preferedDays, setPreferedDays] = useState("");
@@ -120,7 +120,7 @@ function Form() {
           
         <p>Name: {firstName} {lastName}</p>
         <p>Age: {currentAge}</p>
-        <p>Height (in): {height}</p>
+        <p>Height (in): {currentHeight}</p>
         <p>Current Weight (lbs): {currentWeight}</p>
         <p>Goal Weight: {goalWeight}</p>
         <p>Preferred Days of Exercise: {preferedDays}</p>
