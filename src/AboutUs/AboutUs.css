@@ -4,8 +4,8 @@
     text-align: center;
     color: #f0f0f0; /* Chrome-like light color for text */
     font-family: "Baskervville SC", serif;
-    background: linear-gradient(180deg, #000000, #2c2c2c); /* Black to dark chrome gradient */
-    font-size: 28px;
+    
+    font-size: 22px;
     padding-bottom: 10px;
 }
 

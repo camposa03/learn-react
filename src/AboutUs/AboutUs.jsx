@@ -5,56 +5,52 @@ function About(props) {
   const teamMembers = [
     {
       id: 0,
-      name: "martin",
-      experience: "military",
-      about: "father",
+      name: "Each Step",
+      experience: "",
+      about: "iRGO Roofing will walk with you through each step of the process. From insurance claims, to a complete reinstallation, we are here.",
     },
     {
       id: 1,
-      name: "rudy",
-      experience: "trainer",
-      about: "church",
+      name: "Know Your Roof",
+      experience: "",
+      about: "Understand the components of your roof, as well as different roofing types.",
     },
     {
       id: 2,
-      name: "jesse",
-      experience: "sales, coding",
-      about: "dj",
+      name: "Blog",
+      experience: "",
+      about: "Read our blog, which covers a variety of topics that allows you to understand different aspects of the industry!",
     },
   ];
 
   return (
     <div className="about">
       <div className="mission">
-        <h1>About Us</h1>
+        <h1>Our Identity</h1>
         <p>
-          Here at Sacred Visionaries, we pride ourselves in personal growth through fitness!
-          We understand that your journey is unique. <br />
-          Redefining your physical, mental, and spiritual relationships isn't easy. That's what we're here for!
-          To guide those willing to <br />
-          change their lives. From beginner to advanced, weights or calisthenics, and mindset to nutrition, we can help!<br />
+        Welcome to iRGO Roofing, your trusted partner in roofing, construction, and solar services in El Paso, Texas, New Mexico and surrounding areas. We are a family-owned and operated company, proudly licensed and bonded. With over 20 years of industry experience, we've established ourselves as the #1 leading roofing contractor in the region.
         </p>
       </div>
 
       <div className="methods">
-        <h1>Our Methods</h1>
+        <h1>We Are The Standard.</h1>
         <p>
-          As Sacred Visionaries, our team combines fitness, mindset, and more to inspire those on the path of self-development.
-          Our methods include:<br />
+        At iRGO Roofing, our work is more than just a job—it’s a commitment to our clients. We are dedicated to delivering the highest quality craftsmanship while maintaining unparalleled customer service.
         </p>
         <ul className="methodList">
-          <li>Fitness</li>
-          <li>Nutrition</li>
-          <li>Mindset</li>
-          <li>Community</li>
+          <li>Licensed</li>
+          <li>Bonded</li>
+          <li>Insured</li>
+          <li>Preferred Contractor</li>
+          <li>20+ Yrs Industry Experience</li>
         </ul>
       </div>
 
       <br />
 
       <div className="team-intro">
-        <h1>Our Team</h1>
-        <p>Get to know our team members that can and will provide you with guidance!</p>
+        <h1>Guidance & Knowledge</h1>
+        <p>Our values of honor and trust guide everything we do, ensuring that each project is completed to the highest standards.This dedication has earned us the distinct honor of being recognized as the number one roofer in El Paso, TX. and New Mexico. We take pride in the trust our clients place in us, and we strive to exceed their expectations with every project.</p>
       </div>
 
       <div className="team">
@@ -67,8 +63,7 @@ function About(props) {
             />
             <h2>{member.name.charAt(0).toUpperCase() + member.name.slice(1)}</h2>
             <p>
-              {member.name.charAt(0).toUpperCase() + member.name.slice(1)} is a {member.experience} who is also a proud {member.about}.
-              They use their experiences to inspire and motivate others!
+            {member.about}.
             </p>
           </div>
         ))}

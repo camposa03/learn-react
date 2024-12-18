@@ -19,7 +19,7 @@ html {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(180deg, #000000, #2c2c2c); /* Black to dark chrome gradient */
+  background: linear-gradient(360deg, #000000, #CBEE21); /* Black to dark chrome gradient */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -108,14 +108,14 @@ nav ul {
 
 h1{
   font-family: "Baskervville SC", serif;
-  font-size: 55px;
-  color: #ffffff;
+  font-size: 75px;
+  color: black;
 }
 
 h2 {
   font-family: "Baskervville SC", serif;
   font-size: 35px;
-  padding-top: 45px;
+  padding-top: 35px;
 }
 
 button {
@@ -139,7 +139,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #CBEE21;
     background-color: #ffffff;
   }
   /* a:hover {
@@ -251,7 +251,7 @@ footer {
   margin-top: auto;
   padding: 20px;
   text-align: center;
-  background-color: #2c2c2c;
+  background-color: #000000;
   color: #fff;
   width: 100%;
 }

@@ -4,8 +4,8 @@ import '../Home/home.css'
 export default function Home() {
   return (
     <div className='header'>
-      <h2>Sacred Visionaries</h2>
-      <h1>your best self awaits...</h1>
+      <h1>iRGO Roofing</h1>
+      <h2>Built to Last.</h2>
     </div>
   )
 }
