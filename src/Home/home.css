@@ -1,30 +1,38 @@
+.hero {
+  height: 100vh;
+  min-height: 100vh;  /* Ensure it covers the entire screen */
+  background: url('../assets/EP-Mount.jpg')no-repeat center center;
+  background-size: cover; /* Ensure full-screen scaling */
+  display:flex;
+  align-items:center;
+  color: white;
+  position: relative;
+  min-width: 100vw;
+
+}
+
 .header {
-    margin: 255px;
-    text-align: center;
-    color: chrome; /* Replace with a suitable chrome-like color or gradient */
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  min-width: 100%;
 }
 
-.header h2,
-.header h1 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1.5s ease-in-out forwards;
+.header-content {
+  max-width: 500px;  /* Allow content to scale for larger screens */
+  align-items: center;
+  
 }
 
-.header h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.cta-button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  font-size: 1.1rem;
 }
 
-.header h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-}
+.cta-button:hover {
+    background: #2c2c2c;
+  }
+  
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  

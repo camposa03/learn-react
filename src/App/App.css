@@ -1,8 +1,9 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  
 }
 
 /* .logo:hover {
@@ -23,3 +24,4 @@
   padding-top: 2.1rem;
   justify-content: center;
 }
+

@@ -28,14 +28,14 @@ function About(props) {
       <div className="mission">
         <h1>Our Identity</h1>
         <p>
-        Welcome to iRGO Roofing, your trusted partner in roofing, construction, and solar services in El Paso, Texas, New Mexico and surrounding areas. We are a family-owned and operated company, proudly licensed and bonded. With over 20 years of industry experience, we've established ourselves as the #1 leading roofing contractor in the region.
+          Welcome to iRGO Roofing, your trusted partner in roofing, construction, and solar services in El Paso, Texas, New Mexico and surrounding areas. We are a family-owned and operated company, proudly licensed and bonded. With over 20 years of industry experience, we've established ourselves as the #1 leading roofing contractor in the region.
         </p>
       </div>
 
       <div className="methods">
         <h1>We Are The Standard.</h1>
         <p>
-        At iRGO Roofing, our work is more than just a job—it’s a commitment to our clients. We are dedicated to delivering the highest quality craftsmanship while maintaining unparalleled customer service.
+          At iRGO Roofing, our work is more than just a job—it’s a commitment to our clients. We are dedicated to delivering the highest quality craftsmanship while maintaining unparalleled customer service.
         </p>
         <ul className="methodList">
           <li>Licensed</li>
@@ -63,7 +63,7 @@ function About(props) {
             />
             <h2>{member.name.charAt(0).toUpperCase() + member.name.slice(1)}</h2>
             <p>
-            {member.about}.
+              {member.about}.
             </p>
           </div>
         ))}
